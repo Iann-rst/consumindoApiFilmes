@@ -1,6 +1,6 @@
 /**
  * Fazer um requisição http (api.get())
- * useEffect: toda fez que abrir a página, busca os filmes na api
+ * useEffect: toda vez que abrir a página, busca os filmes na api
  * Pegar apenas o id, nome e imagem dos filmes
  */
 
@@ -16,14 +16,27 @@ export default function Home() {
   //Carrega todos os filmes ao acessar o site na rota / (home)
   useEffect(() => {
     async function loadFilmes() {
-      //sujeitoprogramador.com/r-api/?api=filmes
+      try {
 
-      //fetch('https://sujeitoprogramador.com/r-api/?api=filmes')
+        //buscar os dados de uma API externa
+        const response = await api.get('r-api/?api=filmes')
+        setFilmes(response.data);
 
-      const response = await api.get('r-api/?api=filmes')
-      //console.log(response)
-      setFilmes(response.data);
+        /*
+        * Caso estivesse utilizando um backend:
+        * 
+        * Front pede informação para o backend, 
+        * backend por sua vez vai acessar a api externa e 
+        * buscar os dados da requisição do front.
+        * 
+        * Após conseguir os dados, o backend processa os dados e manda um retorno para o Front
+        * 
+        * Front apresenta as informação para o usuário
+        */
 
+      } catch (error) {
+        console.log(error)
+      }
     }
 
     loadFilmes();

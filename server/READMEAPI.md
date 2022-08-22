@@ -7,7 +7,7 @@
 Consumir API
 
 - [x] Posso utilizar o fetch/axios para consumir a API;
-- [x] Toda requisição é uma promessa: Promise - Async/await;
+- [x] Requisição baseada em promessa: Promise - Async/await;
 
 ## backend node.js
 Consumir API
@@ -18,12 +18,12 @@ Consumir API
 
 ## Backend
 
-server.js
-
 inicia a criação do backend 
 ```npm init -y ```
 
 ```npm i express, axios, cors```
+
+server.js
 
 ```
 const cors = require('cors')
@@ -33,11 +33,11 @@ const axios = require('axios')
 
 app.use(cors())
 
-app.get('/', function(req, res) {
+app.get('/', async function(req, res) {
 
 
   //backend comunica com a API
-  const response = await axios('https:...');
+  const response = await axios('https://sujeitoprogramador.com/r-api/?api=filmes/');
   const dados = response.data;
 
   return res.json(dados)
