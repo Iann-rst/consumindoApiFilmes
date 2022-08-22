@@ -2,9 +2,9 @@
 
 ## Como front pode consumir uma API?
 
-- Front-end pode consumir uma API através de requisição HTTP (comunicação do front-end com a API).
+- Front-end pode consumir uma API através de requisição HTTP.
 
-- Para realizar essa comunicação, utilizei o axios. Cliente HTTP baseado em promessas tanto para front ou backend.
+- Para realizar essa comunicação, utilizei o axios. Cliente HTTP baseado em promessas tanto para front como backend.
 
 - Neste caso do projeto o front-end faz o consumo diretamente de uma API de filmes.
 
