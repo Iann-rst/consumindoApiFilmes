@@ -20,7 +20,7 @@ https://sujeitoprogramador.com/r-api/?api=filmes/
 ## Como executar
 
 ```bash
-# Faz o clone do projeto
+# Faça o clone do projeto
 $ git clone https://github.com/Iann-rst/consumindoApiFilmes.git
 
 # Instalar as dependências
